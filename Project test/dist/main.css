@@ -1,0 +1,707 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.conteiner {
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden; }
+
+.header {
+  height: 70px;
+  padding-top: 5px;
+  overflow: hidden; }
+  .header .logo {
+    float: left;
+    width: 28%;
+    list-style: none;
+    margin-top: 14px;
+    margin-left: 4%; }
+  .header #menu {
+    float: right;
+    width: 57.29167%;
+    margin-top: 20px;
+    font-family: 'openSans'; }
+    @media only screen and (max-width: 777px) {
+      .header #menu {
+        position: fixed;
+        top: -10px;
+        right: 25px;
+        height: 50px;
+        width: 50px;
+        display: block;
+        cursor: pointer;
+        transition: opacity 0.2s linear; }
+        .header #menu:hover {
+          opacity: 0.8; } }
+  @media only screen and (max-width: 777px) {
+    .header span {
+      display: block;
+      float: left;
+      clear: both;
+      height: 4px;
+      width: 30px;
+      border-radius: 40px;
+      background-color: #49cbcd;
+      position: absolute;
+      right: 3px;
+      top: 3px;
+      overflow: hidden;
+      transition: all 0.4s ease; }
+      .header span:nth-child(1) {
+        margin-top: 15px;
+        z-index: 9; }
+      .header span:nth-child(2) {
+        margin-top: 25px; }
+      .header span:nth-child(3) {
+        margin-top: 35px; } }
+  @media only screen and (max-width: 777px) {
+    .header .sub-menu {
+      transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      height: 0;
+      width: 0;
+      right: 0;
+      top: 0;
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      z-index: 18;
+      overflow: hidden; } }
+  .header li {
+    display: inline-block;
+    list-style: none; }
+    @media only screen and (max-width: 777px) {
+      .header li {
+        display: block;
+        float: left;
+        clear: both;
+        height: auto;
+        margin-right: -160px;
+        transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+        .header li:first-child {
+          margin-top: 180px; }
+        .header li:nth-child(1) {
+          -webkit-transition-delay: 0.05s; }
+        .header li:nth-child(2) {
+          -webkit-transition-delay: 0.10s; }
+        .header li:nth-child(3) {
+          -webkit-transition-delay: 0.15s; }
+        .header li:nth-child(4) {
+          -webkit-transition-delay: 0.20s; }
+        .header li:nth-child(5) {
+          -webkit-transition-delay: 0.25s; }
+        .header li:nth-child(6) {
+          -webkit-transition-delay: 0.30s; } }
+  @media only screen and (max-width: 777px) {
+    .header li.delete {
+      display: none; } }
+  .header a {
+    text-decoration: none;
+    color: #485460;
+    padding: 25px 13px; }
+    @media only screen and (max-width: 777px) {
+      .header a {
+        padding: 2px;
+        width: 100%;
+        display: block;
+        float: left;
+        line-height: 35px;
+        color: black; } }
+  .header a:hover {
+    border-bottom: 3px solid #49cbcd;
+    background: #f8f9fb; }
+    @media only screen and (max-width: 777px) {
+      .header a:hover {
+        background: none; } }
+  .header .oppenned .sub-menu {
+    opacity: 1;
+    height: 420px;
+    width: 420px; }
+  .header .oppenned span:nth-child(2) {
+    overflow: visible; }
+  .header .oppenned span:nth-child(1), .header .oppenned span:nth-child(3) {
+    z-index: 100;
+    transform: rotate(45deg); }
+  .header .oppenned span:nth-child(1) {
+    transform: rotate(45deg) translateY(4px) translateX(12px); }
+  .header .oppenned span:nth-child(2) {
+    height: 420px;
+    width: 420px;
+    right: -160px;
+    top: -160px;
+    border-radius: 50%;
+    background-color: rgba(164, 215, 204, 0.4); }
+  .header .oppenned span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-3px) translateX(10px); }
+  .header .oppenned li {
+    margin-left: 108px; }
+
+#menu.default {
+  width: 56%; }
+  @media only screen and (max-width: 860px) {
+    #menu.default {
+      width: 62%; } }
+
+#menu.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(164, 215, 204, 0.4);
+  line-height: 3em;
+  margin: 0;
+  padding: 0; }
+  #menu.fixed a:hover {
+    padding: 15px 13px;
+    background: #f8f9fb; }
+  @media only screen and (max-width: 777px) {
+    #menu.fixed {
+      display: none; } }
+
+.banner {
+  background: #a4dfd8;
+  height: 550px;
+  color: white;
+  margin: 0 auto;
+  font-family: 'openSans'; }
+  @media only screen and (max-width: 777px) {
+    .banner {
+      height: 400px; } }
+  @media only screen and (max-width: 480px) {
+    .banner {
+      height: 350px; } }
+  .banner .contBanner {
+    background: url(../img/bannerFon.jpg) center no-repeat;
+    height: 550px;
+    width: 100%;
+    margin: 0 auto; }
+    @media only screen and (max-width: 777px) {
+      .banner .contBanner {
+        height: 400px; } }
+    @media only screen and (max-width: 480px) {
+      .banner .contBanner {
+        height: 350px; } }
+  .banner .cont {
+    width: 95%;
+    margin: 0 auto; }
+    .banner .cont h1 {
+      padding-top: 120px;
+      font-size: 2.8em; }
+      @media only screen and (max-width: 777px) {
+        .banner .cont h1 {
+          padding-top: 70px; } }
+      @media only screen and (max-width: 480px) {
+        .banner .cont h1 {
+          padding-top: 90px;
+          font-size: 1.5em; } }
+    .banner .cont p {
+      font-size: 1em;
+      margin-top: 10px; }
+      @media only screen and (max-width: 480px) {
+        .banner .cont p {
+          font-size: 0.8em; } }
+    .banner .cont a.button1 {
+      display: inline-block;
+      margin-top: 80px;
+      color: white;
+      text-decoration: none;
+      padding: .5em 2em;
+      border-radius: 3px;
+      border: 2px solid;
+      transition: 0.2s;
+      user-select: none;
+      font-size: 1.1em; }
+      @media only screen and (max-width: 480px) {
+        .banner .cont a.button1 {
+          margin-top: 40px;
+          font-size: 0.8em; } }
+    .banner .cont a.button1:hover {
+      background: rgba(255, 255, 255, 0.2); }
+    .banner .cont a.left {
+      float: left;
+      margin-top: 40px; }
+      @media only screen and (max-width: 777px) {
+        .banner .cont a.left {
+          margin-top: 0px; } }
+      @media only screen and (max-width: 480px) {
+        .banner .cont a.left {
+          display: none; } }
+    .banner .cont a.right {
+      float: right;
+      margin-top: 40px; }
+      @media only screen and (max-width: 777px) {
+        .banner .cont a.right {
+          margin-top: 0px; } }
+      @media only screen and (max-width: 480px) {
+        .banner .cont a.right {
+          display: none; } }
+
+#team {
+  height: 500px;
+  padding: 70px;
+  margin: 0 auto;
+  font-family: 'openSans';
+  color: #4e525d; }
+  @media only screen and (max-width: 1200px) {
+    #team {
+      padding: 33px; } }
+  @media only screen and (max-width: 860px) {
+    #team {
+      padding: 2px; } }
+  @media only screen and (max-width: 777px) {
+    #team {
+      height: 460px; } }
+  @media only screen and (max-width: 480px) {
+    #team {
+      height: 566px;
+      padding: 0px; } }
+  #team .contTeam {
+    width: 70%;
+    margin: 0 auto;
+    height: 550px; }
+    @media only screen and (max-width: 1680px) {
+      #team .contTeam {
+        width: 85%; } }
+    @media only screen and (max-width: 1200px) {
+      #team .contTeam {
+        width: 98%; } }
+    @media only screen and (max-width: 860px) {
+      #team .contTeam {
+        width: 100%; } }
+    @media only screen and (max-width: 480px) {
+      #team .contTeam {
+        width: 104%; } }
+    #team .contTeam h1 {
+      margin-bottom: 100px;
+      font-size: 1.8em; }
+      @media only screen and (max-width: 860px) {
+        #team .contTeam h1 {
+          margin-top: 25px; } }
+      @media only screen and (max-width: 777px) {
+        #team .contTeam h1 {
+          margin-bottom: 50px; } }
+      @media only screen and (max-width: 480px) {
+        #team .contTeam h1 {
+          margin-top: 35px;
+          margin-bottom: 10px; } }
+    #team .contTeam li {
+      list-style: none;
+      float: left;
+      width: 20.83333%;
+      margin-left: 3%;
+      font-size: 1em; }
+      @media only screen and (max-width: 1680px) {
+        #team .contTeam li {
+          width: 20%;
+          margin-left: 2.3%;
+          margin-right: 2%; } }
+      @media only screen and (max-width: 1200px) {
+        #team .contTeam li {
+          width: 23%;
+          margin-left: 0%;
+          font-size: 0.68em; } }
+      @media only screen and (max-width: 777px) {
+        #team .contTeam li {
+          width: 45%;
+          margin-left: 2%;
+          margin-bottom: 15px; } }
+      @media only screen and (max-width: 480px) {
+        #team .contTeam li {
+          width: 94%;
+          margin-top: 10%; } }
+    @media only screen and (max-width: 480px) {
+      #team .contTeam li.delete {
+        display: none; } }
+    #team .contTeam a {
+      display: block;
+      height: 201px;
+      width: 201px;
+      margin-left: 27px;
+      margin-bottom: 50px;
+      background: url(../img/ellipse.png) 0 0 no-repeat; }
+      @media only screen and (max-width: 1680px) {
+        #team .contTeam a {
+          margin-left: 17%;
+          margin-bottom: 30px;
+          background: url(../img/ellipse1.png) 0 0 no-repeat;
+          width: 150px;
+          height: 150px; } }
+      @media only screen and (max-width: 1200px) {
+        #team .contTeam a {
+          margin-left: 20%; } }
+      @media only screen and (max-width: 860px) {
+        #team .contTeam a {
+          margin-left: 12%; } }
+      @media only screen and (max-width: 777px) {
+        #team .contTeam a {
+          float: left;
+          background: url(../img/ellipse3.png) no-repeat;
+          height: 72px;
+          width: 72px;
+          margin-left: 11%; } }
+      @media only screen and (max-width: 480px) {
+        #team .contTeam a {
+          margin-left: 5%; } }
+    #team .contTeam a:hover {
+      background-position: 0 -204px; }
+      @media only screen and (max-width: 1680px) {
+        #team .contTeam a:hover {
+          background-position: 0 -150px; } }
+      @media only screen and (max-width: 777px) {
+        #team .contTeam a:hover {
+          background-position: 0 -80px; } }
+      @media only screen and (max-width: 480px) {
+        #team .contTeam a:hover {
+          background-position: 0 -80px; } }
+
+.button2,
+.button3,
+.button4 {
+  text-decoration: none;
+  background: #788492;
+  color: white;
+  padding: 7px 35px;
+  border-radius: 3px;
+  font-size: 0.9em; }
+
+.modeSelect {
+  height: 420px;
+  background: #f1f1f1;
+  padding: 100px;
+  width: 100%; }
+  @media only screen and (max-width: 1680px) {
+    .modeSelect {
+      height: 400px; } }
+  @media only screen and (max-width: 1200px) {
+    .modeSelect {
+      height: 410px; } }
+  @media only screen and (max-width: 860px) {
+    .modeSelect {
+      height: 390px; } }
+  @media only screen and (max-width: 777px) {
+    .modeSelect {
+      height: 400px;
+      padding: 50px; } }
+  @media only screen and (max-width: 480px) {
+    .modeSelect {
+      padding: 0px;
+      height: 356px; } }
+  .modeSelect .contSelect {
+    margin: 0 auto;
+    width: 70%;
+    overflow: hidden;
+    padding-left: 2%;
+    font-family: 'openSans'; }
+    @media only screen and (max-width: 1680px) {
+      .modeSelect .contSelect {
+        width: 85%;
+        margin-left: 5%; } }
+    @media only screen and (max-width: 1200px) {
+      .modeSelect .contSelect {
+        width: 90%;
+        margin-left: -15px; } }
+    @media only screen and (max-width: 860px) {
+      .modeSelect .contSelect {
+        width: 100%;
+        margin-left: -84px; } }
+    @media only screen and (max-width: 777px) {
+      .modeSelect .contSelect {
+        margin-left: -59px;
+        margin-top: -30px; } }
+    @media only screen and (max-width: 480px) {
+      .modeSelect .contSelect {
+        padding-left: 0%;
+        margin-left: 0%;
+        width: 96%;
+        padding-top: 10px; } }
+    .modeSelect .contSelect .blockSelect {
+      float: left;
+      height: 480px;
+      width: 25%;
+      margin-left: 2%; }
+      @media only screen and (max-width: 1680px) {
+        .modeSelect .contSelect .blockSelect {
+          height: 475px;
+          width: 26%; } }
+      @media only screen and (max-width: 1200px) {
+        .modeSelect .contSelect .blockSelect {
+          width: 28%;
+          margin-left: 1%; } }
+      @media only screen and (max-width: 860px) {
+        .modeSelect .contSelect .blockSelect {
+          width: 30%; } }
+      @media only screen and (max-width: 777px) {
+        .modeSelect .contSelect .blockSelect {
+          width: 32%; } }
+      @media only screen and (max-width: 480px) {
+        .modeSelect .contSelect .blockSelect {
+          width: 100%;
+          height: auto;
+          margin-left: -5px; } }
+      .modeSelect .contSelect .blockSelect h1 {
+        color: white;
+        background: #485460;
+        line-height: 3em;
+        font-size: 1.1em; }
+        @media only screen and (max-width: 480px) {
+          .modeSelect .contSelect .blockSelect h1 {
+            float: left;
+            width: 52%;
+            background: url(../img/arrow.png) no-repeat;
+            line-height: 3em;
+            font-size: 22px;
+            text-align: left;
+            padding-left: 10px; } }
+      .modeSelect .contSelect .blockSelect p.price {
+        line-height: 2.8em;
+        background: #f8f9fb;
+        font-size: 1em; }
+        @media only screen and (max-width: 480px) {
+          .modeSelect .contSelect .blockSelect p.price {
+            float: left;
+            width: 43%;
+            background: none; } }
+      @media only screen and (max-width: 480px) {
+        .modeSelect .contSelect .blockSelect .contei {
+          text-align: center; } }
+      @media only screen and (max-width: 480px) {
+        .modeSelect .contSelect .blockSelect ul {
+          display: none; } }
+      .modeSelect .contSelect .blockSelect li {
+        color: #485460;
+        line-height: 3.2em;
+        list-style: none;
+        background: white;
+        border-bottom: 1px solid #f1f1f1;
+        font-size: 1em; }
+      .modeSelect .contSelect .blockSelect p.butt {
+        background: #f8f9fb;
+        line-height: 4.2em; }
+        @media only screen and (max-width: 480px) {
+          .modeSelect .contSelect .blockSelect p.butt {
+            background: none; } }
+      @media only screen and (max-width: 480px) {
+        .modeSelect .contSelect .blockSelect a.button2:hover {
+          background: #49cbcd; } }
+      @media only screen and (max-width: 480px) {
+        .modeSelect .contSelect .blockSelect a.button3:hover {
+          background: #49cbcd; } }
+      @media only screen and (max-width: 480px) {
+        .modeSelect .contSelect .blockSelect a.button4 {
+          width: 90%;
+          background: #49cbcd; } }
+
+#contact {
+  background: black;
+  height: 550px;
+  color: white;
+  font-family: 'openSans'; }
+  @media only screen and (max-width: 777px) {
+    #contact {
+      overflow: hidden; } }
+  #contact .contFooter {
+    height: 550px;
+    background: url(../img/footerFon.jpg) center center no-repeat;
+    width: 100%;
+    margin: 0 auto; }
+  #contact .contText {
+    width: 75%;
+    margin: 0 auto; }
+    @media only screen and (max-width: 1680px) {
+      #contact .contText {
+        width: 87%; } }
+    @media only screen and (max-width: 1200px) {
+      #contact .contText {
+        width: 95%; } }
+    #contact .contText h1 {
+      padding-top: 70px;
+      margin-bottom: 90px; }
+      @media only screen and (max-width: 777px) {
+        #contact .contText h1 {
+          margin-bottom: 60px; } }
+      @media only screen and (max-width: 480px) {
+        #contact .contText h1 {
+          margin-bottom: 40px;
+          padding-top: 38px; } }
+    #contact .contText .leftCont {
+      float: left;
+      text-align: left;
+      width: 30.20833%;
+      margin-left: 10%; }
+      @media only screen and (max-width: 1680px) {
+        #contact .contText .leftCont {
+          margin-left: 8%;
+          width: 33%; } }
+      @media only screen and (max-width: 1200px) {
+        #contact .contText .leftCont {
+          width: 40%; } }
+      @media only screen and (max-width: 860px) {
+        #contact .contText .leftCont {
+          margin-left: 4%; } }
+      @media only screen and (max-width: 480px) {
+        #contact .contText .leftCont {
+          width: 90%; } }
+    #contact .contText h2 {
+      font-size: 1em; }
+      @media only screen and (max-width: 777px) {
+        #contact .contText h2 {
+          display: none; } }
+    #contact .contText p.text {
+      margin-bottom: 40px;
+      font-size: 1em;
+      color: #7d7d7d;
+      line-height: 1.5em;
+      margin-top: 3px; }
+      @media only screen and (max-width: 1680px) {
+        #contact .contText p.text {
+          font-size: 1em; } }
+      @media only screen and (max-width: 860px) {
+        #contact .contText p.text {
+          font-size: 0.68em; } }
+      @media only screen and (max-width: 777px) {
+        #contact .contText p.text {
+          display: none; } }
+    #contact .contText ul {
+      height: 55px;
+      margin-left: -5px; }
+      @media only screen and (max-width: 480px) {
+        #contact .contText ul {
+          width: 139%;
+          margin-left: 21%; } }
+    #contact .contText li {
+      list-style: none; }
+    #contact .contText a {
+      float: left;
+      display: block;
+      background: url(../img/sprite.png) 0 0 no-repeat;
+      width: 42px;
+      height: 42px;
+      margin-right: 10px; }
+    #contact .contText a.twitter {
+      background-position: -47px 0; }
+    #contact .contText a.google {
+      background-position: -94px 0; }
+    #contact .contText p.info {
+      font-size: 0.68em;
+      color: #bface2;
+      line-height: 1.6em; }
+      @media only screen and (max-width: 480px) {
+        #contact .contText p.info {
+          width: 225px;
+          text-align: center;
+          width: 80%;
+          margin-left: 10%; } }
+    #contact .contText .rightCont {
+      margin-right: 7%;
+      float: right;
+      width: 40%; }
+      @media only screen and (max-width: 1680px) {
+        #contact .contText .rightCont {
+          margin-right: 3%; } }
+      @media only screen and (max-width: 1200px) {
+        #contact .contText .rightCont {
+          width: 45%; } }
+      @media only screen and (max-width: 860px) {
+        #contact .contText .rightCont {
+          width: 50%;
+          margin-right: 0%; } }
+      @media only screen and (max-width: 777px) {
+        #contact .contText .rightCont {
+          width: 90%;
+          margin-right: 3%;
+          margin-top: 5%; } }
+      @media only screen and (max-width: 480px) {
+        #contact .contText .rightCont {
+          width: 100%;
+          margin-right: 0%;
+          margin-top: 7%;
+          border-top: 1px solid #485460;
+          padding-top: 5%; } }
+      #contact .contText .rightCont input[type="text"] {
+        line-height: 2.2em;
+        border-radius: 3px;
+        padding-left: 15px;
+        margin-right: 2%;
+        margin-bottom: 25px;
+        width: 37%; }
+        @media only screen and (max-width: 1680px) {
+          #contact .contText .rightCont input[type="text"] {
+            width: 34%; } }
+        @media only screen and (max-width: 860px) {
+          #contact .contText .rightCont input[type="text"] {
+            width: 40%; } }
+        @media only screen and (max-width: 777px) {
+          #contact .contText .rightCont input[type="text"] {
+            width: 41%; } }
+        @media only screen and (max-width: 480px) {
+          #contact .contText .rightCont input[type="text"] {
+            width: 86%;
+            margin-right: 0%; } }
+      #contact .contText .rightCont textarea {
+        border-radius: 3px;
+        display: block;
+        width: 81%;
+        margin-left: 7.5%;
+        height: 100px;
+        padding-left: 10px;
+        padding-top: 10px;
+        margin-bottom: -20px; }
+        @media only screen and (max-width: 1680px) {
+          #contact .contText .rightCont textarea {
+            width: 75.5%;
+            margin-left: 10.5%; } }
+        @media only screen and (max-width: 1200px) {
+          #contact .contText .rightCont textarea {
+            width: 76%;
+            margin-left: 10%; } }
+        @media only screen and (max-width: 860px) {
+          #contact .contText .rightCont textarea {
+            width: 90%;
+            margin-left: 2.4%; } }
+        @media only screen and (max-width: 777px) {
+          #contact .contText .rightCont textarea {
+            width: 87.7%;
+            margin-left: 4.5%; } }
+      #contact .contText .rightCont input[type="button"] {
+        margin-top: 40px;
+        float: right;
+        background: #49cbcd;
+        border: none;
+        color: white;
+        padding: 12px 40px;
+        margin-right: 9%;
+        border-radius: 3px;
+        cursor: pointer; }
+        @media only screen and (max-width: 1680px) {
+          #contact .contText .rightCont input[type="button"] {
+            margin-right: 12%; } }
+        @media only screen and (max-width: 1200px) {
+          #contact .contText .rightCont input[type="button"] {
+            margin-right: 11.5%; } }
+        @media only screen and (max-width: 860px) {
+          #contact .contText .rightCont input[type="button"] {
+            margin-right: 4.5%; } }
+        @media only screen and (max-width: 777px) {
+          #contact .contText .rightCont input[type="button"] {
+            margin-right: 5.5%; } }
+        @media only screen and (max-width: 480px) {
+          #contact .contText .rightCont input[type="button"] {
+            margin-right: 5%; } }
+      #contact .contText .rightCont .error input,
+      #contact .contText .rightCont .error textarea {
+        border: 1px solid red; }
+      #contact .contText .rightCont .error {
+        color: red; }
+      #contact .contText .rightCont .error-message {
+        margin-top: 35px;
+        margin-left: -194px;
+        position: absolute; }
+
+@font-face {
+    font-family: 'openSans';
+    src: url('../font/opensans-regular-webfont.woff2') format('woff2'),
+         url('../font/opensans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Author</title>
+	<link rel="stylesheet" type="text/css" href="dist/main.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/script1.js"></script>
+    <script src="js/script2.js"></script>
+    <script src="js/script3.js"></script>
+    <script src="js/script4.js"></script>
+</head>
+<body>
+
+<div class="conteiner">
+<!-- HEADER -->
+	<div id="home" class="header">
+        <div class="logo">
+        	<img src="img/logo.png">
+        </div>
+        <div id="menu" class="default">
+
+        <span class="cls"></span>
+        <span>   
+        	<ul class="sub-menu">
+        		<li><a href="#home">Home</a></li>
+        		<li><a href="#service">Service</a></li>
+        		<li class="delete"><a href="#portfolio">Portfolio</a></li>
+        		<li><a href="#team">Team</a></li>
+        		<li><a href="#blog">Blog</a></li>
+        		<li><a href="#contact">Contact</a></li>
+        	</ul>
+        </span>
+        <span class="cls"></span>
+        </div>
+	</div>
+
+	<div id="portfolio" class="banner">
+    <div class="contBanner">
+        <div class="cont">      
+		<h1>This is a main heading</h1>
+		<p>Lorem Ipsum is sipmly dummy text</p>
+		<p>of the printing</p>
+        <a href="#" class="button1">Learn More</a>
+        <a class="left" href="#"><img src="img/leftArrow.png"></a>
+        <a class="right" href="#"><img src="img/rightArrow.png"></a>
+        </div>
+    </div>
+	</div>
+
+<!-- TEAM -->
+	<div id="team">
+    <div class="contTeam">
+		<h1>The Team</h1>
+
+		<ul>
+			<li>
+                <a href="#"></a>
+				<h2>Adrian Thomas</h2>
+				<p>CEO & Founder</p>
+				<p>Lorem ipsum dolor is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+			</li>
+			<li>
+                <a href="#"></a>
+				<h2>Narate Ketram</h2>
+				<p>Creative Director</p>
+				<p>Lorem ipsum dolor is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+			</li>
+			<li> 
+                <a href="#"></a>
+				<h2>Fernando Comet</h2>
+				<p>CEO & Founder</p>
+				<p>Lorem ipsum dolor is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+			</li>
+			<li class="delete">
+                <a href="#"></a>
+				<h2>Adedayo Saheed</h2>
+				<p>Creative Director</p>
+                <p>Lorem ipsum dolor is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+			</li>
+		</ul>
+
+        
+    </div>
+	</div>
+
+<!-- MODE SELECTION -->
+    <div id="service" class="modeSelect">
+    <div class="contSelect">
+
+    	<div class="blockSelect">
+    		<h1 class="active1">Basic</h1>
+    		<p class="price">$5.01/Month</p>
+
+    		<ul class="advantages">
+    			<li>Lorem Ipsum</li>
+    			<li>Dolor sit amet, consect</li>
+    			<li>Adipiscing elit</li>
+    			<li>Proin commodo turpis</li>
+    			<li>laus pulvinarvel</li>
+    			<li>Prnare nisi pretium.</li>
+    		</ul>
+
+          <p class="butt"><a href="#" class="button2">Buy now</a></p>
+    	</div>
+
+       	<div class="blockSelect">
+    		<h1 class="active2">Pro</h1>
+    		<p class="price">$10.01/Month</p>
+        
+
+    		<ul class="advantages">
+    			<li>Lorem Ipsum</li>
+    			<li>Dolor sit amet, consect</li>
+    			<li>Adipiscing elit</li>
+    			<li>Proin commodo turpis</li>
+    			<li>laus pulvinarvel</li>
+    			<li>Prnare nisi pretium.</li>
+    		</ul>
+
+    		<p class="butt"><a href="#" class="button3">Buy now</a></p>
+    	</div>
+
+    	<div class="blockSelect">
+    		<h1 class="active3 active">Premium</h1>
+    		<p class="price">$20.01/Month</p>
+
+    		<ul class="advantages">
+    			<li>Lorem Ipsum</li>
+    			<li>Dolor sit amet, consect</li>
+    			<li>Adipiscing elit</li>
+    			<li>Proin commodo turpis</li>
+    			<li>laus pulvinarvel</li>
+    			<li>Prnare nisi pretium.</li>
+    		</ul>
+
+    		<p class="butt"><a href="#" class="button4">Buy now</a></p>
+    	</div>
+
+         </div>
+    </div>
+
+<!-- FOOTER -->
+    <div id="contact" class="footer">
+
+    <div class="contFooter">
+       <div class="contText">
+    	<h1>Contact Us</h1>
+
+    	<div class="leftCont">
+    		<h2>Get in touch with us</h2>
+    		<p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+          
+
+    		<ul>
+    			<li><a class="facebook" href="#"></a></li>
+    			<li><a class="twitter" href="#"></a></li>
+    			<li><a class="google" href="#"></a></li>
+    		</ul>
+
+
+    		<p class="info">Posted by Dospel & GanjaParker</p>
+    		<p class="info">+XX-XXXX - XXXX - XX</p>
+    		<p class="info">info@mail.com</p>
+
+    	</div>
+
+    	<div class="rightCont">
+        <form>
+         <label>
+    		<input type="text" name="user" placeholder="Name">
+        </label>
+        <label>
+            <input type="text" name="mail" placeholder="Email">
+</label>
+            <label>
+                <textarea name="message" placeholder="Message"></textarea>
+            </label>
+
+            <input type="button" onclick="validate(this.form)" value="Send">
+         </form>
+    	</div>
+        </div>
+    </div>
+    </div>
+
+</div>
+</body>
+</html>

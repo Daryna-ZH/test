@@ -1,0 +1,820 @@
+$primary-color: #49cbcd;
+$white: white;
+$black: #485460;
+$gray: #f8f9fb;
+
+$inline: inline-block;
+$margin-top: 10px;
+$font: 'openSans';
+
+$large: 1200px;
+$medium: 860px;
+$small: 480px;
+$extra-small: 480px;
+
+@mixin respond-to($media) {
+	@if $media == handhelds {
+	   @media only screen and (max-width: $extra-small) { @content; }
+	}
+	@else if $media == small-screens {
+       @media only screen and (max-width: $small) { @content; }
+    }
+    @else if $media == middle-screens {
+       @media only screen and (max-width: 777px) { @content; }
+    }
+    @else if $media == medium-screens {
+       @media only screen and (max-width: $medium) { @content; }
+    }
+    @else if $media == large-screens {
+       @media only screen and (max-width: $large) { @content; }
+    }
+    @else if $media == screens {
+       @media only screen and (max-width: 1680px) { @content; }
+    }
+}
+
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.conteiner {
+	margin: 0 auto;
+	text-align: center;
+	overflow: hidden;
+}
+
+
+.header {
+    height: 70px;
+    padding-top: 5px;
+
+    .logo {
+       float: left;
+       width: 28%;
+       list-style: none;
+       margin-top: $margin-top + 4px;
+       margin-left: 4%;
+    }
+
+    #menu {
+       float: right;
+       width: 550px / 960px * 100%;
+       margin-top: $margin-top * 2;
+       font-family: 'openSans';
+       
+        @include respond-to(middle-screens) { position:fixed; 
+                                              top:-10px;
+                                              right:25px;
+                                              height: 50px;
+                                              width: 50px;
+                                              display:block;
+                                              cursor:pointer;
+                                              transition: opacity 0.2s linear;
+                                              &:hover {
+                                                opacity: 0.8;
+                                              }
+                                              }
+       }
+       span {
+          @include respond-to(middle-screens) { display:block;
+                                                float:left;
+                                                clear:both;
+                                                height:4px;
+                                                width:30px;
+                                                border-radius:40px;
+                                                background-color: $primary-color;;
+                                                position:absolute;
+                                                right:3px;
+                                                top:3px;
+                                                overflow:hidden;
+                                                transition: all 0.4s ease;
+                                                &:nth-child(1) {
+                                                    margin-top:15px;
+                                                    z-index:9;
+                                                }
+                                                &:nth-child(2) { margin-top:25px; }
+                                                &:nth-child(3) { margin-top:35px; }
+                                              }
+       }
+       .sub-menu {
+          @include respond-to(middle-screens) {
+                                               transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+		                                       height: 0;
+		                                       width: 0;
+		                                       right: 0;
+		                                       top: 0;
+		                                       position: absolute;
+		                                       background-color: rgba(255, 255, 255,.2);;
+		                                       border-radius: 50%;
+		                                       z-index: 18;
+		                                       overflow: hidden;
+                                              }
+       }
+       li {
+         display: $inline;
+         list-style: none;
+
+         @include respond-to(middle-screens) { display:block;
+                                               float:left;
+                                               clear:both;
+                                               height:auto;
+                                               margin-right: -160px;
+                                               transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                                               &:first-child {
+                                                 margin-top:180px;
+                                               }
+                                               &:nth-child(1) {
+                                                 -webkit-transition-delay: 0.05s;
+                                               }
+                                               &:nth-child(2) {
+                                                  -webkit-transition-delay: 0.10s;
+                                               }
+                                               &:nth-child(3) {
+                                                  -webkit-transition-delay: 0.15s;
+                                               }
+                                               &:nth-child(4) {
+                                                  -webkit-transition-delay: 0.20s;
+                                               }
+                                               &:nth-child(5) {
+                                                  -webkit-transition-delay: 0.25s;
+                                               }
+                                               &:nth-child(6) {
+                                                  -webkit-transition-delay: 0.30s;
+                                               }
+                                             }
+
+       }
+
+
+       li.delete {
+        @include respond-to(middle-screens) { display:none; }
+       }
+       a {
+         text-decoration: none;
+         color: $black;
+         padding: 25px 13px;
+
+         @include respond-to(middle-screens) { padding:2px;
+                                               width:100%;
+                                               display:block;
+                                               float:left;
+                                               line-height:35px;
+                                               color:black;
+                                             }
+       }
+
+       a:hover {
+         border-bottom: 3px solid $primary-color;
+         background: $gray;
+
+         @include respond-to(middle-screens) { background:none; }
+       }
+       
+       .oppenned{
+		  .sub-menu{
+			       opacity: 1;
+			       height: 420px;
+			       width: 420px;
+		           }
+		span:nth-child(2){
+			overflow: visible;
+		}
+		span:nth-child(1), span:nth-child(3){
+			z-index: 100;
+			transform: rotate(45deg);
+		}
+		span:nth-child(1){
+			transform: rotate(45deg) translateY(4px) translateX(12px);
+		}
+		span:nth-child(2){
+			height: 420px;
+			width: 420px;
+			right: -160px;
+			top: -160px;
+			border-radius: 50%;
+			background-color: rgba(164, 215, 204, 0.4);
+		}
+		span:nth-child(3){			
+			transform: rotate(-45deg) translateY(-3px) translateX(10px);
+		}
+		li{
+			margin-left: 108px;
+		}
+	}
+ 
+   overflow: hidden;
+}
+
+   #menu.default {
+       width: 56%;
+
+       @include respond-to(medium-screens) { width:62%; }
+    }
+
+    #menu.fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(164, 215, 204, 0.4);
+      line-height: 3em;
+      margin: 0;
+      padding: 0;
+
+      a:hover {
+         padding: 15px 13px;
+         background: $gray;
+      }
+      
+
+      @include respond-to(middle-screens) { display:none; }
+    }
+
+
+.banner {
+	background: #a4dfd8;
+	height: 550px;
+	color: $white;
+	margin: 0 auto;
+	font-family: 'openSans';
+
+
+    @include respond-to(middle-screens) { height:400px; }
+	@include respond-to(handhelds) { height: 350px; }
+
+
+.contBanner {
+    background: url(../img/bannerFon.jpg) center no-repeat;
+    height: 550px;
+    width: 100%;
+    margin: 0 auto;
+    
+    @include respond-to(middle-screens) { height:400px; }
+    @include respond-to(handhelds) { height: 350px; }
+
+}
+
+   .cont {
+       width: 95%;
+       margin: 0 auto;
+
+
+ 
+	h1 {
+       padding-top: 120px;
+       font-size: 2.8em;
+
+       @include respond-to(middle-screens) { padding-top: 70px; }
+       @include respond-to(handhelds) { padding-top: 90px;
+                                        font-size:1.5em;
+        }
+	}
+
+	p { 
+	    font-size: 1em;
+        margin-top: $margin-top;
+
+        @include respond-to(handhelds) { font-size:0.8em; }
+
+	 }
+
+	a.button1 {
+	   display: $inline;
+	   margin-top: $margin-top * 8;
+	   color: $white;
+	   text-decoration: none;
+	   padding: .5em 2em;
+	   border-radius: 3px;
+	   border: 2px solid;
+	   transition: 0.2s;
+	   user-select: none;
+	   font-size: 1.1em;
+
+	   @include respond-to(handhelds) { margin-top:40px;
+	   font-size:0.8em; }
+	}
+
+	a.button1:hover {
+	   background: rgba(255, 255, 255,.2);
+	}
+
+	a.left {
+	   float: left;
+	   margin-top: $margin-top * 4;
+    
+    @include respond-to(middle-screens) { margin-top:0px;}
+	@include respond-to(handhelds) { display:none; }
+	}
+
+	a.right {
+	   float: right;
+	   margin-top: $margin-top * 4;
+
+	@include respond-to(middle-screens) { margin-top:0px;}
+
+    @include respond-to(handhelds) { display:none; }
+	}
+	}
+}
+
+
+#team {
+	height: 500px;
+	padding: 70px;
+    margin: 0 auto;
+    font-family: 'openSans';
+    color: #4e525d;
+   
+   @include respond-to(large-screens) { padding:33px; }
+
+   @include respond-to(medium-screens) {
+                                        padding:2px;
+                                       }
+   
+   @include respond-to(middle-screens) { height:460px; }                             
+   @include respond-to(handhelds) { height: 566px;
+                                    padding:0px;
+                                  }
+
+
+    .contTeam {
+      width: 70%;
+      margin: 0 auto;
+      height: 550px;
+
+      @include respond-to(screens) { width:85%; }
+
+      @include respond-to(large-screens) { width:98%; }
+
+      @include respond-to(medium-screens) { width:100%; }
+
+      @include respond-to(handhelds) { width:104%; }
+
+    h1 {
+      margin-bottom: 100px;
+      font-size:1.8em;
+      
+      @include respond-to(medium-screens) { margin-top:25px; }
+      
+
+      @include respond-to(middle-screens) { margin-bottom:50px; }
+      @include respond-to(handhelds) { margin-top:35px;
+                                       margin-bottom:10px;
+                                     }
+    }
+    
+
+	li {
+      list-style: none;
+	  float: left;
+	  width: 200px / 960px * 100%;
+	  margin-left: 3%;
+	  font-size:1em;
+      
+
+      @include respond-to(screens) { width:20%; 
+                                     margin-left:2.3%;
+                                     margin-right:2%;
+                                    
+       
+                                   }
+      @include respond-to(large-screens) { width:23%; 
+                                           margin-left:0%;
+                                           font-size:0.68em; 
+                                         }
+
+      @include respond-to(middle-screens) { 
+                                            width:45%;
+                                            margin-left: 2%;
+                                            margin-bottom:15px;
+                                          }
+
+      @include respond-to(handhelds) { width:94%;
+                                       margin-top:10%;
+                                     }                           
+	}
+
+	li.delete {
+	  @include respond-to(handhelds) { display:none; }
+	}
+
+	a {
+	  display: block;
+	  height: 201px;
+	  width: 201px;
+	  margin-left: 27px;
+	  margin-bottom: 50px;
+	  background: url(../img/ellipse.png) 0 0 no-repeat;
+	  
+
+	  @include respond-to(screens) { margin-left: 17%;
+	                                 margin-bottom: 30px;
+	                                 background: url(../img/ellipse1.png) 0 0 no-repeat;
+	                                 width: 150px;
+	                                 height: 150px;
+	                                }
+
+      
+      @include respond-to(large-screens) { margin-left: 20%; }
+
+      @include respond-to(medium-screens) { margin-left:12%; }
+
+      @include respond-to(middle-screens) { float:left;
+                                            background: url(../img/ellipse3.png) no-repeat;
+                                            height:72px;
+                                            width:72px;
+                                            margin-left:11%; }
+
+      @include respond-to(handhelds) { 
+                                        margin-left: 5%;
+
+                                     }
+	}
+
+	a:hover {
+	  background-position: 0 -204px;
+
+	  @include respond-to(screens) { background-position: 0 -150px; }
+
+	  @include respond-to(middle-screens) { background-position: 0 -80px; }
+
+	  @include respond-to(handhelds) { background-position: 0 -80px; }
+	}
+
+}
+}
+
+
+@mixin buttons {
+    text-decoration: none;
+    background: #788492;
+    color: white;
+    padding: 7px 35px;
+	border-radius: 3px;
+	font-size: 0.9em;
+}
+
+.button2, 
+.button3, 
+.button4 { @include buttons;}
+
+.modeSelect {
+	height: 420px;
+	background: #f1f1f1;
+	padding: 100px;
+	width: 100%;
+    
+     @include respond-to(screens) { height:400px; }
+    @include respond-to(large-screens) { height:410px; }
+    @include respond-to(medium-screens) { height:390px; }
+    @include respond-to(middle-screens) { height:400px; padding:50px; }
+    @include respond-to(handhelds) { padding:0px; 
+                                     height:356px;
+                                   }
+
+.contSelect {
+    margin: 0 auto;
+    width: 70%;
+    overflow: hidden;
+    padding-left: 2%;
+    font-family: 'openSans';
+
+
+    @include respond-to(screens) { width: 85%;
+                                   margin-left: 5%;
+                                 }
+
+     @include respond-to(large-screens) { width:90%; 
+                                          margin-left:-15px;;
+                                        }
+
+     @include respond-to(medium-screens) { width:100%; 
+                                           margin-left:-84px;
+                                        }
+
+     @include respond-to(middle-screens) { margin-left:-59px; 
+                                           margin-top: -30px;
+                                         }
+
+     @include respond-to(handhelds) { padding-left:0%; 
+                                      margin-left:0%;
+                                       width:96%;
+                                       padding-top:10px;
+                                    }
+
+
+	.blockSelect {
+	   float: left;
+	   height: 480px;
+	   width: 240px / 960px * 100%;
+	   margin-left: 2%;
+
+
+	   @include respond-to(screens) { height:475px; width: 26%; }
+
+	   @include respond-to(large-screens) { width:28%; 
+	                                        margin-left:1%;
+	                                      }
+
+       @include respond-to(medium-screens) { width:30%; }
+ 
+       @include respond-to(middle-screens) { width:32%; }
+
+       @include respond-to(handhelds) { width:100%;  
+                                        height: auto;
+                                        margin-left: -5px;
+                                      }
+
+       h1 {
+         color: $white;
+         background: $black;
+         line-height: 3em;
+         font-size: 1.1em;
+
+
+         @include respond-to(handhelds) { float:left; width:52%;
+                                          background: url(../img/arrow.png) no-repeat;
+                                          line-height: 3em;
+                                          font-size:22px;
+                                          text-align: left;
+                                          padding-left:10px;
+                                        }
+       }
+
+       p.price {
+         line-height: 2.8em;
+         background: #f8f9fb;
+         font-size: 1em;
+
+         @include respond-to(handhelds) { float:left; 
+                                          width:43%; 
+                                          background:none;
+         }
+       }
+       
+       .contei { 
+
+            @include respond-to(handhelds) { text-align:center;
+   
+             }
+       }
+       ul {
+
+	     @include respond-to(handhelds) { display:none; }
+         
+       }
+
+
+	   li {
+	     color: $black;
+	     line-height: 3.2em;
+	     list-style: none;
+	     background: $white;
+	     border-bottom: 1px solid #f1f1f1;
+	     font-size: 1em;
+
+	     @include respond-to(screen) { font-size:1em; }
+	     @include respond-to(medium-screen) { font-size:0.68em; }
+	   }
+       
+       p.butt {
+         background: #f8f9fb;
+         line-height: 4.2em;
+
+         @include respond-to(handhelds) { background:none; }
+
+
+       }
+       a.button2:hover {
+            @include respond-to(handhelds) { background: $primary-color; }
+       }
+       a.button3:hover {
+            @include respond-to(handhelds) { background: $primary-color; }
+       }
+	   a.button4 {
+          @include respond-to(handhelds) { width: 90%; 
+                                           background: $primary-color;
+                                         }
+	   }
+	}
+
+}
+
+}
+
+#contact {
+    background: black;
+	height: 550px;
+	color: $white;
+	font-family: 'openSans';
+    
+    @include respond-to(middle-screens)  { overflow:hidden; }
+    .contFooter {
+        height: 550px;
+	    background: url(../img/footerFon.jpg) center center no-repeat;
+        width: 100%;
+        margin: 0 auto;
+
+     }
+
+
+     .contText {
+        width: 75%;
+        margin: 0 auto;
+
+        @include respond-to(screens) { width:87% }
+        @include respond-to(large-screens) { width:95%; }
+
+     h1 {
+        padding-top: 70px;
+        margin-bottom: 90px;
+        
+        @include respond-to(middle-screens) { margin-bottom:60px; }
+
+        @include respond-to(handhelds) { margin-bottom:40px;
+                                         padding-top:38px;
+                                       }
+     }
+
+
+
+	.leftCont {
+	   float: left;
+	   text-align: left;
+	   width: 290px / 960px * 100%;
+	   margin-left: 10%;
+
+	   @include respond-to(screens) { margin-left: 8%; width:33%; }
+	   @include respond-to(large-screens) { width:40%; }
+	   @include respond-to(medium-screens) { margin-left:4%; }
+	   @include respond-to(handhelds) { width:90%; }
+	  
+	}
+    h2 {
+        font-size: 1em;
+       @include respond-to(middle-screens) { display:none; }
+    }
+    p.text {
+       margin-bottom: 40px;
+       font-size: 1em;
+       color: #7d7d7d;
+       line-height: 1.5em;
+       margin-top:3px;
+
+
+       @include respond-to(screens) {  font-size: 1em; }
+       @include respond-to(medium-screens) { font-size:0.68em; }
+       @include respond-to(middle-screens) { display:none; }
+    }
+
+    ul {
+       height: 55px;
+       margin-left: -5px;
+        
+
+
+        @include respond-to(handhelds) { width:139%;
+                                         margin-left:21%;
+         }
+    }
+
+	li { 
+	   list-style: none;
+	}
+
+	a {
+	  float: left;
+	  display: block;
+	  background: url(../img/sprite.png) 0 0 no-repeat;
+	  width: 42px;
+	  height: 42px;
+	  margin-right: 10px;
+	}
+
+	a.twitter {
+	  background-position: -47px 0;
+	}
+
+	a.google {
+	  background-position: -94px 0;
+	}
+    
+    p.info {
+    font-size: 0.68em;
+    color: #bface2;
+    line-height: 1.6em;
+         @include respond-to(handhelds) { width:225px;
+         text-align:center; 
+         width: 80%;
+         margin-left:10%;
+
+
+          }
+    }
+	.rightCont {
+	  margin-right: 7%;
+	  float: right;
+	  width: 40%;
+
+	@include respond-to(screens) { margin-right:3%; }
+	@include respond-to(large-screens) { width:45%; }
+
+	@include respond-to(medium-screens) { width:50%;
+	                                      margin-right:0%; }
+
+    @include respond-to(middle-screens) { width:90%;
+                                          margin-right:3%; 
+                                          margin-top: 5%;
+                                          }
+
+	@include respond-to(handhelds) { width:100%; 
+	                                 margin-right:0%;
+	                                 margin-top:7%;
+	                                 border-top: 1px solid $black;
+	                                 padding-top:5%;
+	                               }
+
+	input[type="text"] {
+	  line-height: 2.2em;
+	  border-radius: 3px;
+	  padding-left: 15px;
+	  margin-right: 2%;
+	  margin-bottom: 25px;
+	  width: 37%;
+
+	  @include respond-to(screens) { width: 34%; }
+
+      @include respond-to(medium-screens) { width:40%; }
+
+      @include respond-to(middle-screens) { width:41%; }
+
+	  @include respond-to(handhelds) { width:86%;
+                                       margin-right:0%;
+	  	                             }
+	}
+    
+
+	textarea {
+	   border-radius: 3px;
+       display: block;
+       width: 81%;
+       margin-left: 7.5%;
+       height: 100px;
+       padding-left: 10px;
+       padding-top: 10px;
+       margin-bottom: -20px;
+
+       @include respond-to(screens) { width: 75.5%;
+                                      margin-left: 10.5%;
+                                    }
+
+       @include respond-to(large-screens) { width: 76%; margin-left:10%; }
+
+       @include respond-to(medium-screens) { width:90%;
+                                             margin-left:2.4%;
+       }
+
+       @include respond-to(middle-screens) { width:87.7%;
+       margin-left:4.5% }
+
+	}
+
+	input[type="button"] {
+	  margin-top: 40px;
+	  float: right;
+	  background: $primary-color;
+	  border: none;
+	  color: white;
+	  padding: 12px 40px;
+	  margin-right: 9%;
+	  border-radius: 3px;
+	  cursor: pointer;
+
+	  @include respond-to(screens) { margin-right: 12%; }
+	  @include respond-to(large-screens) { margin-right: 11.5%; }
+	  @include respond-to(medium-screens) { margin-right:4.5%; }
+	  @include respond-to(middle-screens) { margin-right:5.5%; }
+	  @include respond-to(handhelds) { margin-right:5%; }
+	}
+
+	.error input,
+	.error textarea { 
+	  border: 1px solid red;
+
+	}
+	.error {
+	  color: red;
+	}
+    .error-message {
+      margin-top: 35px;
+      margin-left: -194px;
+      position: absolute;
+    }
+	}
+
+	}
+}
+
