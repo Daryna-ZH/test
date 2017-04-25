@@ -812,6 +812,8 @@ $extra-small: 480px;
       margin-top: 32px;
       margin-left: -160px;
       position: absolute;
+
+       @include respond-to(handhelds) { margin-left:-143px; }
     }
 	}
 

@@ -696,6 +696,9 @@
         margin-top: 32px;
         margin-left: -160px;
         position: absolute; }
+        @media only screen and (max-width: 480px) {
+          #contact .contText .rightCont .error-message {
+            margin-left: -143px; } }
 
 @font-face {
     font-family: 'openSans';
