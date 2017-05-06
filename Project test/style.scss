@@ -175,34 +175,47 @@ $extra-small: 480px;
        
        .oppenned{
 		  .sub-menu{
+       @include respond-to(handhelds) {
 			       opacity: 1;
 			       height: 420px;
 			       width: 420px;
 		           }
+
+       }
 		span:nth-child(2){
-			overflow: visible;
+			@include respond-to(handhelds) { overflow: visible; }
 		}
 		span:nth-child(1), span:nth-child(3){
+		    @include respond-to(handhelds) {
 			z-index: 100;
-			transform: rotate(45deg);
+			transform: rotate(45deg); }
 		}
 		span:nth-child(1){
+		@include respond-to(handhelds) {
 			transform: rotate(45deg) translateY(4px) translateX(12px);
 		}
+		}
 		span:nth-child(2){
+		@include respond-to(handhelds) {
 			height: 420px;
 			width: 420px;
 			right: -160px;
 			top: -160px;
 			border-radius: 50%;
 			background-color: rgba(164, 215, 204, 0.4);
+			}
 		}
-		span:nth-child(3){			
+		span:nth-child(3){	
+		@include respond-to(handhelds) {		
 			transform: rotate(-45deg) translateY(-3px) translateX(10px);
+			}
 		}
 		li{
+		@include respond-to(handhelds) {
 			margin-left: 108px;
 		}
+		}
+
 	}
  
    overflow: hidden;
