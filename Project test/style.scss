@@ -175,7 +175,7 @@ $extra-small: 480px;
        
        .oppenned{
 		  .sub-menu{
-       @include respond-to(handhelds) {
+       @include respond-to(middle-screens) {
 			       opacity: 1;
 			       height: 420px;
 			       width: 420px;
@@ -183,20 +183,20 @@ $extra-small: 480px;
 
        }
 		span:nth-child(2){
-			@include respond-to(handhelds) { overflow: visible; }
+			@include respond-to(middle-screens) { overflow: visible; }
 		}
 		span:nth-child(1), span:nth-child(3){
-		    @include respond-to(handhelds) {
+		    @include respond-to(middle-screens) {
 			z-index: 100;
 			transform: rotate(45deg); }
 		}
 		span:nth-child(1){
-		@include respond-to(handhelds) {
+		@include respond-to(middle-screens) {
 			transform: rotate(45deg) translateY(4px) translateX(12px);
 		}
 		}
 		span:nth-child(2){
-		@include respond-to(handhelds) {
+		@include respond-to(middle-screens) {
 			height: 420px;
 			width: 420px;
 			right: -160px;
@@ -206,12 +206,12 @@ $extra-small: 480px;
 			}
 		}
 		span:nth-child(3){	
-		@include respond-to(handhelds) {		
+		@include respond-to(middle-screens) {		
 			transform: rotate(-45deg) translateY(-3px) translateX(10px);
 			}
 		}
 		li{
-		@include respond-to(handhelds) {
+		@include respond-to(middle-screens) {
 			margin-left: 108px;
 		}
 		}
@@ -549,7 +549,7 @@ $extra-small: 480px;
 
 
          @include respond-to(handhelds) { float:left; width:52%;
-                                          background: url(../img/arrow.png) no-repeat;
+                                          background: url(../img/arrow.png) no-repeat !important;
                                           line-height: 3em;
                                           font-size:22px;
                                           text-align: left;

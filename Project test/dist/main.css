@@ -113,22 +113,22 @@
     @media only screen and (max-width: 777px) {
       .header a:hover {
         background: none; } }
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 777px) {
     .header .oppenned .sub-menu {
       opacity: 1;
       height: 420px;
       width: 420px; } }
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 777px) {
     .header .oppenned span:nth-child(2) {
       overflow: visible; } }
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 777px) {
     .header .oppenned span:nth-child(1), .header .oppenned span:nth-child(3) {
       z-index: 100;
       transform: rotate(45deg); } }
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 777px) {
     .header .oppenned span:nth-child(1) {
       transform: rotate(45deg) translateY(4px) translateX(12px); } }
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 777px) {
     .header .oppenned span:nth-child(2) {
       height: 420px;
       width: 420px;
@@ -136,10 +136,10 @@
       top: -160px;
       border-radius: 50%;
       background-color: rgba(164, 215, 204, 0.4); } }
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 777px) {
     .header .oppenned span:nth-child(3) {
       transform: rotate(-45deg) translateY(-3px) translateX(10px); } }
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 777px) {
     .header .oppenned li {
       margin-left: 108px; } }
 
@@ -454,7 +454,7 @@
           .modeSelect .contSelect .blockSelect h1 {
             float: left;
             width: 52%;
-            background: url(../img/arrow.png) no-repeat;
+            background: url(../img/arrow.png) no-repeat !important;
             line-height: 3em;
             font-size: 22px;
             text-align: left;
